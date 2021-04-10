@@ -9,7 +9,8 @@ WORKDIR /app
 ADD . /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
+RUN pip install --use-deprecated=legacy-resolver -r requirements.txt
 
 # Expose port 
 EXPOSE 5000
